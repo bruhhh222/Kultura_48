@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kultura_48</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            box-sizing: border-box;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s;
+            margin-right: 10px;
+        }
+        
+        .nav-links a:hover {
+            color: #b3e0ff;
+        }
+        
+        .content {
+            margin-top: 60px;
+        }
+
+        .pagesLink a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        .pagesLink a:hover {
+            color: #b3e0ff;
+        }
+        
+        .section {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        .box {
+            width: 80%;
+            max-width: 1000px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: -30px;
+        }
+        
+        #section1 {
+            background-image: url(photos/two-happy-girls-modeling_1429-491.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+        
+        #section1 .box {
+            background-color: #e6f7ff;
+            border: 2px solid #b3e0ff;
+        }
+        
+        #section2 {
+            background-image: url(photos/students-having-conversation-park_245974-4703.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+        
+        #section2 .box {
+            background-color: #ffe6f2;
+            border: 2px solid #ffb3d9;
+        }
+        
+        #section3 {
+            background-image: url(photos/f08a38b5db4bd3e756dab75f7f96699fc05472c39e8fd08d91de8a0828fe2054.jpeg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+        
+        #section3 .box {
+            background-color: #f0ffe6;
+            border: 2px solid #b3ff99;
+        }
+        
+        #section4 {
+            background-image: url(photos/31380a1929f6567b1c4b640365d95e9d.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+        
+        #section4 .box {
+            background-color: #fff0e6;
+            border: 2px solid #ffcc99;
+        }
+        
+        #section5 {
+            background-image: url(photos/molodezh-2.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+        
+        #section5 .box {
+            background-color: #f9e6ff;
+            border: 2px solid #e6b3ff;
+        }
+        
+        #section6 {
+            background-color: #f5f5f5;
+            height: auto;
+            min-height: 100vh;
+            padding: 60px 0;
+        }
+        
+        #section6 .box {
+            background-color: white;
+            border: 2px solid #ddd;
+            margin-top: 0;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .gallery-caption {
+            padding: 15px;
+            background-color: white;
+            text-align: center;
+        }
+        
+        h1 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        h2 {
+            color: #444;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            color: #555;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Культура 48</div>
+        <nav class="nav-links">
+            <a href="#section1">Знакомство</a>
+            <a href="#section2">Культура раньше</a>
+            <a href="#section3">Современность</a>
+            <a href="#section4">Мероприятия</a>
+            <a href="#section5">Будущее</a>
+            <a href="#section6">Галерея</a>
+        </nav>
+
+        <nav class="pagesLink">
+            <a href="main.html">Главная</a>
+            <a href="About.html">О нас</a>
+        </nav>
+    </header>
+    <div class="content">
+        <div id="section1" class="section">
+            <div class="box">
+                <h1>Здравствуй, пользователь!</h1>
+                <p>Привет, пользователь! Добро пожаловать на сайт "Культура Молодёжи Липецка"! Здесь мы собираем все самое интересное и актуальное о культурной жизни нашего города. Мы стремимся создать пространство, где молодые люди могут находить вдохновение. От концертов и выставок до мастер-классов и волонтерских акций. Открывайте новые горизонты и становитесь частью культурного движения Липецка!</p>
+            </div>
+        </div>
+        <div id="section2" class="section">
+            <div class="box">
+                <h1>Культура раньше</h1>
+                <p>Культура молодежи Липецка в 90-х и 2000-х годах была насыщенной и разнообразной, отражая изменения в стране.
+
+                    В 90-е годы, после распада Советского Союза, молодежь начала активно интересоваться западной музыкой, что способствовало популяризации рок-музыки и панк-культуры. Появились независимые музыкальные группы, проводившие концерты в клубах. Уличная культура, включая хип-хоп и граффити, также стала популярной. Молодежь активно участвовала в театральных постановках и художественных проектах.
+                    
+                    С началом 2000-х годов молодежная культура продолжила развиваться благодаря интернету, который открыл доступ к мировым трендам. В Липецке проводились фестивали музыки и искусства, а клубы стали центрами притяжения для молодежи. Увеличился интерес к образованию в сфере культуры, появились новые курсы по искусству и дизайну.
+                    
+                    Таким образом, культура молодежи Липецка в эти два десятилетия была временем экспериментов и активного участия в культурной жизни города, заложив основы для дальнейшего развития региона.</p>
+            </div>
+        </div>
+        <div id="section3" class="section">
+            <div class="box">
+                <h1>Современная культура</h1>
+                <p>Сегодня культура молодежи Липецка представляет собой динамичную и многообразную среду, где сочетаются традиции и современные тенденции. В городе активно развиваются различные направления: от уличного искусства до цифрового творчества. Молодые липчане участвуют в организации фестивалей, арт-пространств и культурных инициатив. Особой популярностью пользуются коворкинги, где можно работать над проектами, обмениваться идеями и находить единомышленников. Социальные сети и цифровые платформы стали неотъемлемой частью культурного самовыражения, позволяя молодежи делиться своим творчеством с широкой аудиторией.</p>
+            </div>
+        </div>
+        <div id="section4" class="section">
+            <div class="box">
+                <h1>Мероприятия и события</h1>
+                <p>Липецк предлагает богатую палитру мероприятий для молодежи. Ежегодно в городе проводятся такие события как: фестиваль уличного искусства "Арт-Сфера", молодежный театральный форум "Новые горизонты", музыкальный конкурс "Липецкие голоса". В летний период открываются площадки под открытым небом, где проходят кинопоказы, концерты и мастер-классы. Библиотеки города трансформируются в современные культурные центры с лекториями, дискуссионными клубами и выставками. Особое внимание уделяется волонтерским программам, позволяющим молодым людям участвовать в организации крупных городских событий и приобретать ценный опыт.</p>
+            </div>
+        </div>
+        <div id="section5" class="section">
+            <div class="box">
+                <h1>Будущее культуры Липецка</h1>
+                <p>Перспективы развития молодежной культуры в Липецке выглядят многообещающе. Город инвестирует в создание новых культурных пространств, таких как арт-резиденции и инновационные центры творчества. Планируется расширение программы грантовой поддержки молодежных инициатив. Особый акцент делается на междисциплинарные проекты, сочетающие искусство, технологии и науку. В ближайшие годы ожидается рост числа коллабораций между творческими сообществами Липецка и других городов России, что будет способствовать обмену опытом и новыми идеями. Цифровизация культурной среды откроет дополнительные возможности для самореализации молодежи в виртуальном пространстве.</p>
+            </div>
+        </div>
+        <div id="section6" class="section">
+            <div class="box">
+                <h1>Галерея</h1>
+                <p>Фотографии с мероприятий и культурных событий Липецка</p>
+                
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="https://vinoilyudi.ru/wp-content/uploads/2025/02/060824-1.jpg" alt="Культурное мероприятие">
+                        <div class="gallery-caption">Фестиваль - Виноград</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://static.tildacdn.com/tild3065-3338-4437-a430-656435613964/mptn9oEmtoK9mzSSZbBk.jpg" alt="Концерт молодежных групп">
+                        <div class="gallery-caption">Фестиваль - Вереск</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://motorcity.pro/wp-content/uploads/2021/12/nvxhbq5oxuo-2048x1367.jpg" alt="Выставка современного искусства">
+                        <div class="gallery-caption">Фестиваль - MotoFest 48 rus</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://afisha.allelets.ru/data/images/pages/4784/1280x/7861e26ebe541658e67e40fbea0e2a58121f67d2.jpg" alt="Театральная постановка">
+                        <div class="gallery-caption">Фестиваль - Середина лета</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://static.tildacdn.com/tild3538-3065-4130-b566-316434363133/Skornykovo_191021-39.jpg" alt="Мастер-класс по граффити">
+                        <div class="gallery-caption">Фестиваль - «Sport + Music»</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://huntportal.ru/assets/images/articles/novosti/2023/zapiski-ohotnika-4-04-09-2023.jpg" alt="Волонтерская акция">
+                        <div class="gallery-caption">Фестиваль Дворянской охоты</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const sections = [
+            document.getElementById('section1'),
+            document.getElementById('section2'),
+            document.getElementById('section3'),
+            document.getElementById('section4'),
+            document.getElementById('section5'),
+            document.getElementById('section6')
+        ];
+        
+        let isScrolling = false;
+        let currentSection = 0;
+        const scrollTimeout = 1000;
+        
+        function scrollToSection(index) {
+            if (index < 0 || index >= sections.length) return;
+            
+            isScrolling = true;
+            currentSection = index;
+            
+            window.scrollTo({
+                top: sections[index].offsetTop,
+                behavior: 'smooth'
+            });
+            
+            setTimeout(() => {
+                isScrolling = false;
+            }, scrollTimeout);
+        }
+        
+        window.addEventListener('wheel', function(e) {
+            if (isScrolling) return;
+            e.preventDefault();
+            const delta = e.deltaY;
+            if (delta > 0 && currentSection < sections.length - 1) {
+                scrollToSection(currentSection + 1);
+            }
+            else if (delta < 0 && currentSection > 0) {
+                scrollToSection(currentSection - 1);
+            }
+        }, { passive: false });
+        
+        let startY = 0;
+        window.addEventListener('touchstart', function(e) {
+            startY = e.touches[0].clientY;
+        }, { passive: true });
+        
+        window.addEventListener('touchend', function(e) {
+            if (isScrolling) return;
+            const endY = e.changedTouches[0].clientY;
+            const delta = startY - endY;
+            if (delta > 50 && currentSection < sections.length - 1) {
+                scrollToSection(currentSection + 1);
+            }
+            else if (delta < -50 && currentSection > 0) {
+                scrollToSection(currentSection - 1);
+            }
+        }, { passive: true });
+        
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetIndex = sections.findIndex(section => '#' + section.id === targetId);
+                if (targetIndex !== -1) {
+                    scrollToSection(targetIndex);
+                }
+            });
+        });
+        
+        window.addEventListener('scroll', function() {
+            if (isScrolling) return;
+            const scrollPosition = window.scrollY + window.innerHeight / 2;
+            for (let i = 0; i < sections.length; i++) {
+                if (scrollPosition >= sections[i].offsetTop && 
+                    (i === sections.length - 1 || scrollPosition < sections[i + 1].offsetTop)) {
+                    currentSection = i;
+                    break;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
